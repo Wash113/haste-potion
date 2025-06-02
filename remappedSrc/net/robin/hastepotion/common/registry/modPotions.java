@@ -11,9 +11,9 @@ import net.robin.hastepotion.HastePotion;
 
 public class modPotions {
 
-    public static final RegistryEntry<Potion> haste_potion = registerPotions("haste_potion", new Potion("haste_potion", new StatusEffectInstance(StatusEffects.HASTE, 3600)));
-    public static final RegistryEntry<Potion> long_haste_potion = registerPotions("long_haste_potion", new Potion("long_haste_potion", new StatusEffectInstance(StatusEffects.HASTE, 9600)));
-    public static final RegistryEntry<Potion> strong_haste_potion = registerPotions("strong_haste_potion", new Potion("strong_haste_potion", new StatusEffectInstance(StatusEffects.HASTE, 3600, 1)));
+    public static final RegistryEntry<Potion> haste_potion = registerPotions("haste_potion", new Potion(new StatusEffectInstance(StatusEffects.HASTE, 3600)));
+    public static final RegistryEntry<Potion> long_haste_potion = registerPotions("long_haste_potion", new Potion(new StatusEffectInstance(StatusEffects.HASTE, 9600)));
+    public static final RegistryEntry<Potion> strong_haste_potion = registerPotions("strong_haste_potion", new Potion(new StatusEffectInstance(StatusEffects.HASTE, 3600, 1)));
 
     public static RegistryEntry<Potion> registerPotions(String id, Potion potion) {
         return Registry.registerReference(Registries.POTION, Identifier.of(HastePotion.MOD_ID, id), potion);
